@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum de Elian Calzadilla</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333333;
+            background-color: #d4f4ff; /* Nuevo color celeste pastel */
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* ... (el resto del CSS permanece igual) ... */
+    </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            background-color: #e6f2ff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            position: relative;
+            border: 5px double #000; /* Línea negra exterior */
+        }
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border: 10px solid #2980b9; /* Línea azul interior */
+            border-radius: 5px;
+            pointer-events: none;
+        }
+        .header {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #d4e6f7;
+            flex-wrap: wrap;
+        }
+        .photo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 25px;
+        }
+        .photo {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border: 10px solid #2980b9;
+            box-shadow: 0 0 8px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .info {
+            flex: 1;
+            min-width: 250px;
+        }
+        h1 {
+            margin: 0;
+            color: #2c3e50;
+            font-size: 28px;
+        }
+        h2 {
+            color: #2980b9;
+            border-bottom: 2px solid #a8d8ff;
+            padding-bottom: 5px;
+            margin-top: 25px;
+            font-size: 22px;
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .contact-info {
+            list-style: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+        .contact-info li {
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+        .contact-info i {
+            margin-right: 10px;
+            color: #3498db;
+        }
+        strong {
+            color: #2c3e50;
+        }
+        .job-title {
+            color: #2980b9;
+            font-weight: bold;
+        }
+        .date {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        .job-item, .education-item {
+            margin-bottom: 20px;
+        }
+        
+        /* Estilos para el menú de redes sociales */
+        .social-menu {
+            text-align: center;
+            width: 100%;
+        }
+        .social-toggle {
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .social-toggle:hover {
+            background-color: #3498db;
+        }
+        .social-toggle i {
+            margin-right: 5px;
+        }
+        .social-dropdown {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            border-radius: 5px;
+            z-index: 1;
+            padding: 10px 0;
+            margin-top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .social-dropdown a {
+            color: #333;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+        .social-dropdown a:hover {
+            background-color: #f1f1f1;
+            color: #2980b9;
+        }
+        .social-dropdown i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+        .show {
+            display: block;
+        }
+        
+        @media (max-width: 600px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .photo-container {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            .info {
+                text-align: center;
+            }
+            .contact-info {
+                display: inline-block;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="photo-container">
+                <img src="Captura de pantalla 2025-04-13 001250.png" alt="Foto de Elian Calzadilla" class="photo">
+                <div class="social-menu">
+                    <button class="social-toggle" onclick="toggleSocial()">
+                        <i>📱</i> Mis Redes Sociales
+                    </button>
+                    <div class="social-dropdown" id="socialDropdown">
+                        <a href="#"><i>🔗</i> LinkedIn</a>
+                        <a href="#"><i>🐦</i> Twitter</a>
+                        <a href="#"><i>📷</i> Instagram</a>
+                        <a href="#"><i>💻</i> GitHub</a>
+                        <a href="#"><i>📧</i> Email</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info">
+                <h1>ELIAN CALZADILLA CESPEDES</h1>
+                <p><strong>Desarrollador Front-End Senior</strong></p>
+                <ul class="contact-info">
+                    <li><i>📧</i> eliancito.com</li>
+                    <li><i>📱</i> +591 69328941</li>
+                    <li><i>📍</i> Vallegrande, Bolivia</li>
+                    <li><i>🔗</i> linkedin.com/in/lyan</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Sobre mí</h2>
+            <p>Desarrollador web con 5+ años de experiencia especializado en React y Vue.js. Apasionado por crear interfaces de usuario intuitivas y accesibles. Experiencia liderando equipos ágiles y colaborando con diseñadores para implementar soluciones creativas que mejoran la experiencia del usuario y aumentan la conversión.</p>
+        </div>
+
+        <div class="section">
+            <h2>Experiencia Laboral</h2>
+            <div class="job-item">
+                <p>
+                    <span class="job-title">Desarrollador Front-End Senior</span> - 
+                    <span class="date">2020 - Presente</span><br>
+                    <em>TechSolutions S.A., Madrid</em>
+                </p>
+                <ul>
+                    <li>Lideré el rediseño de la plataforma principal, mejorando el rendimiento en un 40%</li>
+                    <li>Implementé un sistema de diseño modular que redujo el tiempo de desarrollo en un 30%</li>
+                    <li>Mentoría a 3 desarrolladores junior en el equipo</li>
+                </ul>
+            </div>
+            <div class="job-item">
+                <p>
+                    <span class="job-title">Desarrollador Front-End</span> - 
+                    <span class="date">2017 - 2020</span><br>
+                    <em>DigitalCreations, Barcelona</em>
+                </p>
+                <ul>
+                    <li>Desarrollé 15+ sitios web responsivos usando React y Sass</li>
+                    <li>Optimicé el rendimiento de carga, reduciendo el tiempo promedio de 5s a 1.8s</li>
+                    <li>Colaboré estrechamente con el equipo de UX para implementar diseños accesibles</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Educación</h2>
+            <div class="education-item">
+                <p>
+                    <strong>Máster en Desarrollo Web</strong> -
+                    <span class="date">Power by Lyan</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSocial() {
+            const dropdown = document.getElementById('socialDropdown');
+            dropdown.classList.toggle('show');
+        }
+        
+        // Cerrar el menú si se hace clic fuera de él
+        window.onclick = function(event) {
+            if (!event.target.matches('.social-toggle') && !event.target.closest('.social-menu')) {
+                const dropdowns = document.getElementsByClassName('social-dropdown');
+                for (let i = 0; i < dropdowns.length; i++) {
+                    const openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
